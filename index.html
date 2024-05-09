@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martija Web</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hobbies {
+            font-size: 50px;
+            text-align: center;
+            padding: 80px 0;
+            background-color: #f2f2f2;
+        }
+
+        .project_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            font-size: 20px;
+        }
+
+        .project_card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project_card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s;
+            border-radius: 15px; /* Adding rounded corners */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+        }
+
+        .project_card:hover img {
+            transform: scale(1.1);
+        }
+
+        .project_text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .project_card:hover .project_text {
+            opacity: 1;
+        }
+
+        .btn-custom {
+            font-size: 20px;
+            padding: 20px 20px;
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Nils</span>Mikkel</a>
+        
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About Me</a>
+            <a href="#hobbies" style="--i:3">Hobbies</a>
+            <a href="#education" style="--i:4">Education</a>
+        </nav>
+
+        <a href="#contact" class="contact">Contact Me</a>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-content">
+            <h3>Hi</h3>
+            <h1>I'm <span>Nils Mikkel<br></span>From INF222</h1>
+
+            <p>As an aspiring Information Technologist, I'm currently uncertain about which specific field within IT to pursue, given the vast array of options available, which can feel overwhelming; however, I'm optimistic that with the guidance and insights from those around me, I'll eventually narrow down my choices and find the right path to follow.</p>
+        </div>
+
+        <div class="img-box">
+            <img src="wcprofile.jpg" alt="suit">
+        </div>
+    </section>
+
+    <script>
+        const btns = document.querySelectorAll('.btn-custom');
+
+        btns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+
+            btn.addEventListener('mouseleave', function() {
+                this.classList.remove('active');
+            });
+        });
+    </script>
+
+    <section id="about" class="about">
+        <div class="about-img">
+            <img src="mikkel.jpg" alt="vaca">
+        </div>
+
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Nils <span>Mikkel</span></h3>
+            <p>Hello everyone, I'm Nils Mikkel L. Martija, a 21-year-old currently embarking on my second year of college. My academic journey has been one of exploration and adaptation, marked by a significant decision to shift courses back in 2022. Originally, I began my studies in Medical Technology at LPU Batangas, but as life unfolded, I found myself drawn towards a different path.
+                Transitioning from the medical field to Information Technology (IT) in NU Lipa was a pivotal moment for me. It wasn't merely a change of subjects; it was a shift in perspective and a challenge to acquire an entirely new skill set. One aspect of IT that presented a particular challenge for me was coding. Despite my initial struggles and the misconception that IT is easy, I've come to realize that mastering coding requires dedication, patience, and a willingness to learn.</p>
+            <a href="#hobbies" class="btn btn-custom">Hobbies</a>
+        </div>
+    </section>
+
+    <section id="hobbies" class="hobbies">
+        <div class="section_container hobbies_container">
+            <p class="section_subtitle">My<span> Hobbies</span></p>
+            <h2 class="section_title"><Hobbies> My hobbies enrich my life in various ways, providing avenues for self-expression, learning, and relaxation. It contribute to my mental and emotional well-being, helping me stay balanced and fulfilled amidst life's challenges. Keep nurturing these interests, as it play a vital role in shaping me and how I engage with the world around me.</h2>
+            <div class="project_grid">
+                <div class="project_card">
+                    <img src="series.jpg" alt="movies">
+                    <div class="project_text">
+                        <p>Watching Movies and TV series in my free time.</p>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <img src="reading.jpg" alt="manhwa">
+                    <div class="project_text">
+                        <p>I read Manhwa/comics that the plot is interesting for me. </p>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <img src="fr.jpg" alt="friends">
+                    <div class="project_text">
+                        <p>I love hanging out with my friends and talking with them. We laugh a lot because of each others humor.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#education" class="btn btn-custom">Education</a> 
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <div class="container">
+            <h2>Educational <span>Background</span></h2>
+            <div class="education-details">
+                <div class="education-item">
+                    <h3>College Degree</h3>
+                    <p class="institution">National University Lipa</p>
+                    <p class="degree">Bachelor of Science Information Technology Specialized in Mobile and Web Application</p>
+                    <p class="duration">Year: 2nd Year 3rd Semester</p>                
+                </div>
+                <div class="education-item">
+                    <h3>College Degree</h3>
+                    <p class="institution">Lyceum of the Philippines Batangas</p>
+                    <p class="degree">Bachelor of Science Medical Laboratory Science</p>
+                    <p class="duration">Shift Course: 2022</p>
+                </div>
+                <div class="education-item">
+                    <h3>Senior High School Diploma</h3>
+                    <p class="institution">Apec Schools</p>
+                    <p class="strand">Science, Technology, Engineering, and Mathematics</p>
+                    <p class="duration">Year of Graduation: 2021</p>
+                </div>
+                <div class="education-item">
+                    <h3>Junior High School Diploma</h3>
+                    <p class="institution">Lodlod National Integrated High School</p>
+                    <p class="duration">Year of Graduation: 2019</p>
+                </div>
+                <!-- Add more education items as needed -->
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact" class="contact-form">
+        <h2 class="contact-me">Contact <span>Me</span></h2>
+        <form action="#">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Full Name">
+                <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="Phone Number">
+                <input type="text" class="form-control" placeholder="Subject">
+            </div>
+            <textarea class="form-control" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn btn-primary">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/nmlmx14"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/nmlmx__/"><i class='bx bxl-instagram'></i></a>
+            <a href="https://twitter.com/Nils_Martija"><i class='bx bxl-twitter'></i></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox"><i class='bx bxl-gmail'></i></a>
+        </div>
+        
+        <ul class="list">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+
+        <p class="copyright">© 2024 Nils | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="bootstrap-4.5.3-dist/"></script>
+    <script src="bootstrap-5.3.3-dist/"></script>
+</body>
+</html>
