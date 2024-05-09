@@ -32,7 +32,7 @@
 4.Commit your changes and push them to GitHub: git add . git commit -m "Initial commit" git push origin main
 5. Your website will be live at https://nilsmartija.github.io/nilsmartija/
 
-#Feedback or Contribution
+# Feedback or Contribution
 - If you have any feedback, suggestions, or contributions for my Website, please feel free to reach out to Nils Mikkel L. Martija via the contact information provided on the website.
 
 # Licence
